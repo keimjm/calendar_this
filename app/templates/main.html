@@ -8,5 +8,23 @@
 </head>
 <body>
   <h1>Calendar</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Start</th>
+        <th>End</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+        <tr>
+          <td>{{ row[1] }}</td>
+          <td>{{ row[2].strftime("%H:%M") }}</td>
+          <td>{{ row[3].strftime("%H:%M") }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </body>
 </html>
